@@ -1,0 +1,10 @@
+/node_modules
+.next
+/dist
+/apps/backend/dist
+/apps/backend/node_modules
+/apps/frontend/node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store

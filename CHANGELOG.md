@@ -1,0 +1,11 @@
+[vNext]
+- [SERVICE] Project initialization
+  - Backend:
+    - NestJS (TypeScript) — REST API with Swagger docs available at `/docs` and CORS enabled.
+    - Node.js (>=26), TypeScript, `class-validator`, `class-transformer` for DTOs and validation.
+  - Frontend:
+    - Next.js (TypeScript) — React app with a simple homepage at `/`.
+    - Client calls backend `GET /health` and displays the response.
+  - UI additions:
+    - Homepage with a "Call backend" button.
+    - Loading and error states for the backend call, and display of backend JSON response.
