@@ -1,0 +1,28 @@
+{
+  "name": "@ainalyzer/backend",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "start:dev": "ts-node-dev --respawn --transpile-only --no-notify --ignore-watch node_modules src/main.ts",
+    "build": "tsc -p tsconfig.build.json",
+    "start": "node dist/main.js",
+    "lint": "eslint . --ext .ts"
+  },
+  "dependencies": {
+    "@nestjs/common": "11.1.26",
+    "@nestjs/core": "11.1.26",
+    "@nestjs/platform-express": "11.1.26",
+    "@nestjs/swagger": "11.4.4",
+    "@nestjs/mapped-types": "2.1.1",
+    "class-transformer": "0.5.1",
+    "class-validator": "0.15.1",
+    "reflect-metadata": "0.1.13",
+    "swagger-ui-express": "5.0.1"
+  },
+  "devDependencies": {
+    "ts-node-dev": "2.0.0",
+    "typescript": "5.6.3",
+    "@types/express": "4.17.19",
+    "@types/node": "25.9.3"
+  }
+}
