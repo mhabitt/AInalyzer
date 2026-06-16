@@ -1,4 +1,5 @@
 [vNext]
+- [FEATURE] Nutrition demands calculator
 - [SERVICE] Project initialization
   - Backend:
     - NestJS (TypeScript) — REST API with Swagger docs available at `/docs` and CORS enabled.

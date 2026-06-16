@@ -1,6 +1,13 @@
 "use client";
 
 import { useState } from 'react';
+import {
+  calculateAdvancedTDEE,
+  ActivityType,
+  BodyType,
+  Gender,
+  Intensity,
+} from 'domain/nutrition';
 
 export default function Home() {
   const [health, setHealth] = useState<string | null>(null);
@@ -24,6 +31,18 @@ export default function Home() {
     }
   };
 
+  const calories = calculateAdvancedTDEE({
+    gender: Gender.Male,
+    age: 25,
+    weightKg: 70,
+    heightCm: 175,
+    bodyType: BodyType.Mesomorph,
+    sessions: [
+      { type: ActivityType.Strength, intensity: Intensity.High, durationMinutes: 45, countPerWeek: 3 },
+    ],
+  });
+
+
   return (
     <main style={{ padding: '2rem', fontFamily: 'system-ui, sans-serif' }}>
       <h1>AInalyzer frontend</h1>
@@ -35,6 +54,8 @@ export default function Home() {
         <div style={{ marginTop: '1rem', whiteSpace: 'pre-wrap' }}>
           <strong>Backend response:</strong>
           <div>{health}</div>
+          <strong>Calories estimate:</strong>
+          <pre>{calories.bmi}, {calories.bmr}, {calories.tdee}</pre>
         </div>
       )}
       {error && (
